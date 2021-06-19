@@ -1,6 +1,6 @@
 package quanlycanbo;
 
-public class CanBo {
+public class CanBo implements Comparable<CanBo> {
     private String name;
     private String yearOfBirth;
     private String gender;
@@ -56,5 +56,10 @@ public class CanBo {
                 ", gender='" + gender + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(CanBo o) {
+        return this.getName().compareTo(o.getName());
     }
 }

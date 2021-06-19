@@ -18,6 +18,7 @@ Một đơn vị sản xuất gồm có các cán bộ là công nhân, kỹ sư
  7. tìm kiếm toàn bộ cán bộ theo ngành(cả nhân viên và kỹ sư)
  8. Thoát khỏi chương trình.
  */
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class MainCanBo {
@@ -31,8 +32,8 @@ public class MainCanBo {
             System.out.println("3. Xóa nhân viên theo tên");//ok
             System.out.println("4. Edit nhân viên theo tên");//ok
             System.out.println("5. Hiển thị thông tin cán bộ");//ok
-            System.out.println("6. Sắp xếp nhân viên theo tên");// Chưa làm dc
-            System.out.println("7. Tìm kiếm cán bộ theo ngành");// Chưa làm dc
+            System.out.println("6. Sắp xếp nhân viên theo tên");// ok
+            System.out.println("7. Tìm kiếm cán bộ theo ngành");// Chưa làm dc, đang bị lỗi
             int choice= Integer.parseInt(scanner.nextLine());
             switch(choice){
                 case 0:
@@ -107,8 +108,15 @@ public class MainCanBo {
                     String name4= scanner.nextLine();
                     Manage.Edit(name4);
                     break;
+                case 6:
+                    Manage.sort();
+                    break;
+                case 7:
+                    System.out.println(" Nhập ngành cần tìm kiếm");
+                    String major= scanner.nextLine();
+                    Manage.findMajor(major);
+                    break;
             }
-
         }while(true);
     }
 }
