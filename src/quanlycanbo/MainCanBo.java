@@ -33,7 +33,7 @@ public class MainCanBo {
             System.out.println("4. Edit nhân viên theo tên");//ok
             System.out.println("5. Hiển thị thông tin cán bộ");//ok
             System.out.println("6. Sắp xếp nhân viên theo tên");// ok
-            System.out.println("7. Tìm kiếm cán bộ theo ngành");// Chưa làm dc, đang bị lỗi
+            System.out.println("7. Tìm kiếm cán bộ theo ngành");// ok
             int choice= Integer.parseInt(scanner.nextLine());
             switch(choice){
                 case 0:

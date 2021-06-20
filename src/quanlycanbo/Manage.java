@@ -1,5 +1,6 @@
 package quanlycanbo;
 
+import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
 import com.sun.scenario.effect.impl.sw.java.JSWColorAdjustPeer;
 
 import java.sql.SQLOutput;
@@ -120,15 +121,11 @@ public class Manage {
     static void sort(){ Arrays.sort(arrCB);}
     static void findMajor(String major){
         for(CanBo cb: arrCB){
-            if(cb instanceof KySu && ( ((KySu) cb).getMajor().equals(major))){
+            if(cb instanceof KySu && (((KySu) cb).getMajor().equals(major))){
                 System.out.println(cb);
-                break;
-            }else if(cb instanceof CongNhan && ( ((CongNhan) cb).getMajor().equals(major))){
+            }
+            if(cb instanceof CongNhan && (((CongNhan) cb).getMajor().equals(major))){
                 System.out.println(cb);
-                break;
-            }else {
-                System.out.println(" k tìm thấy major");
-                break;
             }
         }
     }
